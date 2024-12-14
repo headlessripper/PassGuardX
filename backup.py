@@ -189,7 +189,7 @@ class BackupApp(QWidget):
         super().__init__()
 
         # Set up the window
-        self.setWindowTitle("Password Manager Backup")
+        self.setWindowTitle("PassGuardX Backup")
         self.setGeometry(100, 100, 200, 200)
         self.setWindowOpacity(0.9)
 
@@ -207,10 +207,10 @@ class BackupApp(QWidget):
         # Layout and widgets
         self.layout = QVBoxLayout()
 
-        self.info_label = QLabel("Press the button to back up your file to Google Drive.", self)
+        self.info_label = QLabel("Are you sure you want to backup!", self)
         self.layout.addWidget(self.info_label)
 
-        self.backup_button = QPushButton("Backup to Google Drive", self)
+        self.backup_button = QPushButton("Backup", self)
         self.backup_button.clicked.connect(self.backup_file)
         self.layout.addWidget(self.backup_button)
 
